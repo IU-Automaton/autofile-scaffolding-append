@@ -1,0 +1,25 @@
+{
+  "name": "autofile-scaffolding-append",
+  "version": "0.0.1",
+  "description": "Append data to {{placeholders}} in files. This will look for the placeholder in a file, and append a string to it.",
+  "main": "autofile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IU-Automaton/autofile-scaffolding-append"
+  },
+  "keywords": [
+    "autofile",
+    "automaton",
+    "task",
+    "glob",
+    "scaffolding",
+    "append",
+    "placeholder"
+  ],
+  "author": "Indigo United",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
