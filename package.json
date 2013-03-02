@@ -1,7 +1,7 @@
 {
   "name": "autofile-scaffolding-append",
   "version": "0.0.0",
-  "description": "Append data to {{placeholders}} in files. This will look for the placeholder in a file, and append a string to it.",
+  "description": "Append data to {{placeholders}} in files.",
   "main": "autofile.js",
   "scripts": {
     "test": "mocha -R spec"
