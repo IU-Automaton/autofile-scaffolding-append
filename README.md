@@ -1,9 +1,9 @@
 `automaton task` - http://indigounited.com/automaton
 
-rm
+scaffolding-append
 ===
 
-Remove file or set of files.
+Append data to `{{placeholders}}` in files.
 
 *Indigo United 2013*
 
