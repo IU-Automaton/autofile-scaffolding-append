@@ -1,10 +1,11 @@
 'use strict';
 
-var fs        = require('fs');
-var expect    = require('expect.js');
-var rimraf    = require('rimraf');
-var append    = require('../autofile');
-var automaton = require('automaton').create();
+var fs        = require('fs'),
+    expect    = require('expect.js'),
+    rimraf    = require('rimraf'),
+    append    = require('../autofile'),
+    automaton = require('automaton').create()
+;
 
 describe('scaffolding-append', function () {
     function clean(done) {
