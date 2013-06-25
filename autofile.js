@@ -38,7 +38,12 @@ module.exports = function (task) {
                 data[key] = opt.data[key] + '{{' + key + '}}';
                 next();
             }
-        }, function () {
+        }, function (err) {
+
+            if (err) {
+                return next(err);
+            }
+
             // data is done at this time
             // For each item in the files array, perform a glob
             async.forEach(files, function (file, next) {

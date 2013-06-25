@@ -115,6 +115,30 @@ describe('scaffolding-append', function () {
         });
     });
 
+    it('should throw error if datafile doesn\'t exist', function (done) {
+        automaton.run({
+            setup: function (opts, ctx, next) {
+                opts.__dirname = __dirname;
+                next();
+            },
+            tasks: [
+                {
+                    task: append,
+                    options: {
+                        files: ['{{__dirname}}/tmp/file1.json', '{{__dirname}}/tmp/file1_copy.json'],
+                        data: {'xpto': 'file_that_will_never_exist'},
+                        type: 'file'
+                    }
+                }
+            ]
+        }, null, function (err) {
+            expect(err).to.be.an(Error);
+            expect(err.code).to.be.equal('ENOENT');
+
+            done();
+        });
+    });
+
     it('should accept minimatch patterns', function (done) {
         automaton.run({
             setup: function (opts, ctx, next) {
